@@ -7,22 +7,73 @@
   </head>
   <body>
     <button class="refresh" type="button">Twittler</button>
-
+    <button class="shawnd" type="button">@shawndrost</button>
+    <button class="shark" type="button">@sharksforcheap</button>
+    <button class="mracus" type="button">@mracus</button>
+    <button class="doug" type="button">@douglascalhoun</button>
     <div class="tweetFeed"></div>
+
   <main>
-    <script>
-        
-      $(document).ready(function(){
-        var when = event.timeStamp;
-      $('button').on('click', function(){
-        //var when = event.timeStamp;
+    <script> 
+      //The next thing I want to do it make each user name a click event. 
+      //Then filters out all other users tweets(arrays)
+      $(document).ready(function() {
+      $('.refresh').on('click', function(){
         var $tweetFeed = $('.tweetFeed');
         $tweetFeed.html('');
         var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
           var $tweet = $('<div class="feed"></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
+          $tweet.text('@' + tweet.user + ': ' + tweet.message + " " + tweet.created_at);
+          $tweet.appendTo($tweetFeed);
+          index -= 1;
+        }
+      });
+      $('.shawnd').on('click', function(){
+        var $tweetFeed = $('.tweetFeed');
+        $tweetFeed.html('');
+        var index = streams.users.shawndrost.length - 1;
+        while(index >= 0){
+          var tweet = streams.users.shawndrost[index];
+          var $tweet = $('<div class="feed"></div>');
+          $tweet.text('@' + tweet.user + ': ' + tweet.message + " " + tweet.created_at);
+          $tweet.appendTo($tweetFeed);
+          index -= 1;
+        }
+      });
+      $('.shark').on('click', function(){
+        var $tweetFeed = $('.tweetFeed');
+        $tweetFeed.html('');
+        var index = streams.users.sharksforcheap.length - 1;
+        while(index >= 0){
+          var tweet = streams.users.sharksforcheap[index];
+          var $tweet = $('<div class="feed"></div>');
+          $tweet.text('@' + tweet.user + ': ' + tweet.message + " " + tweet.created_at);
+          $tweet.appendTo($tweetFeed);
+          index -= 1;
+        }
+      });
+      $('.mracus').on('click', function(){
+        var $tweetFeed = $('.tweetFeed');
+        $tweetFeed.html('');
+        var index = streams.users.mracus.length - 1;
+        while(index >= 0){
+          var tweet = streams.users.mracus[index];
+          var $tweet = $('<div class="feed"></div>');
+          $tweet.text('@' + tweet.user + ': ' + tweet.message + " " + tweet.created_at);
+          $tweet.appendTo($tweetFeed);
+          index -= 1;
+        }
+      });
+      $('.doug').on('click', function(){
+        var $tweetFeed = $('.tweetFeed');
+        $tweetFeed.html('');
+        var index = streams.users.douglascalhoun.length - 1;
+        while(index >= 0){
+          var tweet = streams.users.douglascalhoun[index];
+          var $tweet = $('<div class="feed"></div>');
+          $tweet.text('@' + tweet.user + ': ' + tweet.message + " " + tweet.created_at);
           $tweet.appendTo($tweetFeed);
           index -= 1;
         }
