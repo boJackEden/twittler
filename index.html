@@ -3,25 +3,33 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <link type="text/css" rel="stylesheet" href="main.css">
   </head>
   <body>
+    <button class="refresh" type="button">Twittler</button>
+
+    <div class="tweetFeed"></div>
+  <main>
     <script>
-
+        
       $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
-
+        var when = event.timeStamp;
+      $('button').on('click', function(){
+        //var when = event.timeStamp;
+        var $tweetFeed = $('.tweetFeed');
+        $tweetFeed.html('');
         var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
+          var $tweet = $('<div class="feed"></div>');
           $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
+          $tweet.appendTo($tweetFeed);
           index -= 1;
         }
-
       });
+    });
 
     </script>
+  </main>
   </body>
 </html>
