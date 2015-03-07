@@ -1,12 +1,39 @@
-.refresh {
+ body {
+ 	background-image: url(images/dark_embroidery.png);
+ 	background-position: top left;
+ 	background-repeat: repeat;
+ }
+ body h1 {
+ 	font-size: 100px;
+ 	font-weight: bold;
+ 	color: white;
+ 	text-align: center;
+ 	margin-top: 5px;
+ 	margin-bottom: 0px;
+ }
+
+ aside button {
+ 	text-align: center;
+ }
+ 
+
+
+ .refresh {
 	font-size: 24px;
 	border-radius: 5px;
-
-	
+	display: block;
+	text-align: center;
+	color: white;
+ 	display: block;
+ 	margin:10px auto 10px auto;
 }
 
 .feed {
-	color: red;
-	padding: 5px 25px 5px 25px;
-	
+	text-align: center;
+	display: inline-block;
+	color: white;
+	padding: 5px 5px 5px 5px;
+	border:1px solid red;
+	margin: 3px 30px 3px 0px;
+
 }
