@@ -8,8 +8,14 @@
  	font-weight: bold;
  	color: white;
  	text-align: center;
- 	margin-top: 5px;
- 	margin-bottom: 0px;
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
+ 	//border: 1px solid white;
+ }
+
+ aside{
+ 	padding-left: 330px;
+ 	padding-bottom: 25px;
  }
 
  aside button {
@@ -31,9 +37,9 @@
 .feed {
 	text-align: center;
 	display: inline-block;
-	color: white;
+	color: #FFCCFF;
 	padding: 5px 5px 5px 5px;
-	border:1px solid red;
+	border-bottom:1px solid white;
 	margin: 3px 30px 3px 0px;
 
 }
